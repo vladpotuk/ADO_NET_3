@@ -1,1 +1,47 @@
-﻿
+﻿<Window x:Class="ADO_NET_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO_NET_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" x:Name="StationeryIdTextBox" Margin="10" VerticalScrollBarVisibility="Auto"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Stationery ID"/>
+
+        <TextBox Grid.Row="1" x:Name="StationeryNameTextBox" Margin="10" VerticalScrollBarVisibility="Auto"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Stationery Name"/>
+
+        <TextBox Grid.Row="2" x:Name="StationeryTypeTextBox" Margin="10" VerticalScrollBarVisibility="Auto"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Stationery Type"/>
+
+        <TextBox Grid.Row="3" x:Name="QuantityTextBox" Margin="10" VerticalScrollBarVisibility="Auto"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Quantity"/>
+
+        <TextBox Grid.Row="4" x:Name="CostPerUnitTextBox" Margin="10" VerticalScrollBarVisibility="Auto"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Cost per Unit"/>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="10">
+            <Button Content="Insert" Click="InsertStationeryButton_Click" Margin="5"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
+            <Button Content="Update" Click="UpdateStationeryButton_Click" Margin="5"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
+            <Button Content="Delete" Click="DeleteStationeryButton_Click" Margin="5"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="6" TextWrapping="Wrap" Text="{Binding Message}" Margin="10"/>
+    </Grid>
+</Window>
